@@ -33,7 +33,8 @@
                             ContractResolver =
                                 new Newtonsoft.Json.Serialization.
                                 CamelCasePropertyNamesContractResolver(),
-                            Formatting = Formatting.Indented
+                            Formatting = Formatting.Indented,
+                            NullValueHandling = NullValueHandling.Ignore
                         });
 
             this.content = Encoding.UTF8.GetBytes(_jsonObject);

@@ -1,5 +1,8 @@
 ﻿namespace SirenSharp
 {
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
     /// <summary>
     /// Fields represent controls inside of actions.
     /// </summary>
@@ -13,6 +16,18 @@
         {
             this.Name = name;
             this.Type = FieldTypes.Text;
+            this.Value = null;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Field"/> class with required properties.
+        /// </summary>
+        /// <param name="name">Name of the field</param>
+        /// <param name="@type">Type of the field</param>
+        public Field(string name, FieldTypes @type)
+        {
+            this.Name = name;
+            this.Type = @type;
             this.Value = null;
         }
 
@@ -33,6 +48,7 @@
         /// depend on the value of the action's type attribute. See type under Actions, 
         /// above. Optional.
         /// </remarks>
+        [JsonConverter(typeof(StringEnumConverter))]
         public FieldTypes Type { get; set; }
 
         /// <summary>

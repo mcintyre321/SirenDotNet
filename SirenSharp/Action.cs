@@ -3,6 +3,9 @@
     using System;
     using System.Collections.Generic;
 
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
     /// <summary>
     /// Actions show available behaviors an entity exposes.
     /// </summary>
@@ -66,6 +69,7 @@
         /// GET, PUT, POST, DELETE, or PATCH. As new methods are introduced, this list can be 
         /// extended. If this attribute is omitted, GET should be assumed. Optional.
         /// </remarks>
+        [JsonConverter(typeof(StringEnumConverter))]
         public HttpVerbs Method { get; set; }
 
         /// <summary>
