@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenSharp", "SirenSharp\Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenSharp.Examples", "SirenSharp.Examples\SirenSharp.Examples.csproj", "{FE28855D-45EC-46DB-9015-2BABC22EA53E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenSharp.Mvc", "SirenSharp.Mvc\SirenSharp.Mvc.csproj", "{54662F44-4956-4FB2-8A26-75AB236D3F5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FE28855D-45EC-46DB-9015-2BABC22EA53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE28855D-45EC-46DB-9015-2BABC22EA53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE28855D-45EC-46DB-9015-2BABC22EA53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54662F44-4956-4FB2-8A26-75AB236D3F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54662F44-4956-4FB2-8A26-75AB236D3F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54662F44-4956-4FB2-8A26-75AB236D3F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54662F44-4956-4FB2-8A26-75AB236D3F5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

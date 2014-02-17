@@ -25,6 +25,22 @@
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Action"/> class with required properties.
+        /// </summary>
+        /// <param name="name">Name of the action</param>
+        /// <param name="href">Hypermedia reference</param>
+        public Action(string name, string href)
+        {
+            this.Name = name;
+            this.Class = null;
+            this.Method = HttpVerbs.Get;
+            this.Href = new Uri(href, UriKind.Relative);
+            this.Title = null;
+            this.Type = "application/x-www-form-urlencoded";
+            this.Fields = null;
+        }
+
+        /// <summary>
         /// Gets or sets the name of the action.
         /// </summary>
         /// <remarks>

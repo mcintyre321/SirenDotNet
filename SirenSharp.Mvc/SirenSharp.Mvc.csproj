@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{31DB25C2-C8D3-49C6-90FD-AD9ED8F16ECB}</ProjectGuid>
+    <ProjectGuid>{54662F44-4956-4FB2-8A26-75AB236D3F5F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SirenSharp</RootNamespace>
-    <AssemblyName>SirenSharp</AssemblyName>
+    <RootNamespace>SirenSharp.Mvc</RootNamespace>
+    <AssemblyName>SirenSharp.Mvc</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,20 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Action.cs" />
-    <Compile Include="ErrorMessage.cs" />
-    <Compile Include="Field.cs" />
-    <Compile Include="FieldTypes.cs" />
-    <Compile Include="HttpVerbs.cs" />
-    <Compile Include="IHypermediaEntity.cs" />
-    <Compile Include="Link.cs" />
-    <Compile Include="ResponseEnvelope.cs" />
-    <Compile Include="SubEntity.cs" />
-    <Compile Include="Entity.cs" />
+    <Compile Include="ApiContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SirenSharp\SirenSharp.csproj">
+      <Project>{31DB25C2-C8D3-49C6-90FD-AD9ED8F16ECB}</Project>
+      <Name>SirenSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(ProgramFiles)\MSBuild\StyleCop\v4.7\StyleCop.Targets" />
   <PropertyGroup>
     <PostBuildEvent>copy $(TargetPath) C:\Projects\Hawthorns\packages</PostBuildEvent>
   </PropertyGroup>

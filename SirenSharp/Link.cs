@@ -20,6 +20,17 @@
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Link"/> class with required properties.
+        /// </summary>
+        /// <param name="href">Hypermedia reference</param>
+        /// <param name="rel">Unique relationship</param>
+        public Link(string href, params string[] rel)
+        {
+            this.Rel = rel;
+            this.Href = new Uri(href, UriKind.Relative);
+        }
+
+        /// <summary>
         /// Gets or sets the unique relationship for a client to find this link.
         /// </summary>
         /// <remarks>
