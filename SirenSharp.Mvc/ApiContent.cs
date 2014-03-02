@@ -9,7 +9,7 @@
 
     using Newtonsoft.Json;
 
-    public class ApiContent<T> : HttpContent where T : IHypermediaEntity
+    public class ApiContent<T> : HttpContent where T : ResponseEnvelope<IHypermediaEntity>
     {
         private readonly byte[] content;
         private readonly int offset;
@@ -19,10 +19,10 @@
         {
             HypermediaEntity = new Entity<T>
             {
-                Actions = entity.GetSirenActions(),
-                Class = entity.GetSirenClasses(),
-                Entities = entity.GetSirenSubEntities(),
-                Links = entity.GetSirenLinks(),
+                Actions = entity.Data.GetSirenActions(),
+                Class = entity.Data.GetSirenClasses(),
+                Entities = entity.Data.GetSirenSubEntities(),
+                Links = entity.Data.GetSirenLinks(),
                 Properties = entity
             };
 

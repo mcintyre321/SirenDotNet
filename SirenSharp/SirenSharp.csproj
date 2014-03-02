@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action.cs" />
-    <Compile Include="ErrorMessage.cs" />
+    <Compile Include="Exception.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="FieldTypes.cs" />
     <Compile Include="HttpVerbs.cs" />
@@ -58,6 +58,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ProgramFiles)\MSBuild\StyleCop\v4.7\StyleCop.Targets" />
   <PropertyGroup>

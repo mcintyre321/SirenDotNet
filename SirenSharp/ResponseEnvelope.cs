@@ -15,7 +15,7 @@
         {
             this.IsSuccess = false;
             this.Data = default(T);
-            this.ErrorMessages = new List<ErrorMessage>();
+            this.ErrorMessages = new List<Exception>();
         }
 
         /// <summary>
@@ -31,6 +31,6 @@
         /// <summary>
         /// Gets or sets a list of error messages if the request failed
         /// </summary>
-        public IList<ErrorMessage> ErrorMessages { get; set; }
+        public IList<Exception> ErrorMessages { get; set; }
     }
 }
