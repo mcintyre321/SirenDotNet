@@ -12,7 +12,8 @@
         InternalAccessOnly = 1000,
         HashInvalid = 1001,
         CredentialsInvalid = 1002,
-        RequestNotValidAnymore = 1003
+        RequestNotValidAnymore = 1003,
+        ParameterInvalid = 1004
     }
 
     /// <summary>
@@ -29,6 +30,7 @@
         {
             this.Code = code;
             this.Message = message;
+            this.Timestamp = DateTime.Now;
         }
 
         /// <summary>
@@ -41,6 +43,7 @@
         {
             this.Code = code;
             this.Message = string.Format(message, args);
+            this.Timestamp = DateTime.Now;
         }
 
         /// <summary>
@@ -52,6 +55,11 @@
         /// Gets or sets the error code associated with the error
         /// </summary>
         public int Code { get; set; }
+
+        /// <summary>
+        /// Gets or sets the timestamp the error occurred at
+        /// </summary>
+        public DateTime Timestamp { get; set; }
 
         public IEnumerable<string> GetSirenClasses()
         {

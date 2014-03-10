@@ -50,7 +50,6 @@
     <Compile Include="HttpVerbs.cs" />
     <Compile Include="IHypermediaEntity.cs" />
     <Compile Include="Link.cs" />
-    <Compile Include="ResponseEnvelope.cs" />
     <Compile Include="SubEntity.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
