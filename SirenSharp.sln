@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenSharp", "SirenSharp\SirenSharp.csproj", "{31DB25C2-C8D3-49C6-90FD-AD9ED8F16ECB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenSharp.Examples", "SirenSharp.Examples\SirenSharp.Examples.csproj", "{FE28855D-45EC-46DB-9015-2BABC22EA53E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenSharp.Mvc", "SirenSharp.Mvc\SirenSharp.Mvc.csproj", "{54662F44-4956-4FB2-8A26-75AB236D3F5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{299207DA-E6D2-4B05-98B1-DC53D9D2FBBF}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
