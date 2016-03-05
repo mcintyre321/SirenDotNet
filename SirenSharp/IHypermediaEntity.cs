@@ -8,6 +8,11 @@
     public interface IHypermediaEntity
     {
         /// <summary>
+        /// Gets a list of rels relative from the entity parent to this entity
+        /// </summary>
+        /// <returns>An IEnumerable list of strings</returns>
+        IEnumerable<string> GetSirenRels();
+        /// <summary>
         /// Gets a list of Siren classes associated with this entity
         /// </summary>
         /// <returns>An IEnumerable list of strings</returns>
@@ -17,7 +22,7 @@
         /// Gets a list of Siren sub-entities associated with this entity
         /// </summary>
         /// <returns>An IEnumerable list of subentities</returns>
-        IEnumerable<SubEntity> GetSirenSubEntities();
+        IEnumerable<Entity> GetSirenSubEntities();
 
         /// <summary>
         /// Gets a list of Siren links associated with this entity

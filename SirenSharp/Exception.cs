@@ -61,14 +61,19 @@
         /// </summary>
         public DateTime Timestamp { get; set; }
 
+        public IEnumerable<string> GetSirenRels()
+        {
+            yield break;
+        }
+
         public IEnumerable<string> GetSirenClasses()
         {
             return new [] { "error" };
         }
 
-        public IEnumerable<SubEntity> GetSirenSubEntities()
+        public IEnumerable<Entity> GetSirenSubEntities()
         {
-            return new List<SubEntity>();
+            return new List<Entity>();
         }
 
         public IEnumerable<Link> GetSirenLinks()

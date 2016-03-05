@@ -14,12 +14,17 @@
 
         public int CustomerId { get; set; }
 
+        public IEnumerable<string> GetSirenRels()
+        {
+            yield break;
+        }
+
         public IEnumerable<string> GetSirenClasses()
         {
             return new List<string>() { "order" };
         }
 
-        public IEnumerable<SubEntity> GetSirenSubEntities()
+        public IEnumerable<Entity> GetSirenSubEntities()
         {
             return null;
         }

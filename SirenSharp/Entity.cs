@@ -1,12 +1,13 @@
-﻿namespace SirenSharp
+﻿using Newtonsoft.Json.Linq;
+
+namespace SirenSharp
 {
     using System.Collections.Generic;
 
     /// <summary>
     /// Represents the Siren entity wrapper.
     /// </summary>
-    /// <typeparam name="T">Data class to return</typeparam>
-    public class Entity<T>
+    public class Entity
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Entity{T}"/> class with required properties.
@@ -14,7 +15,7 @@
         public Entity()
         {
             this.Class = null;
-            this.Properties = default(T);
+            this.Properties = new Dictionary<string, JToken>();
             this.Entities = null;
             this.Links = null;
             this.Actions = null;
@@ -36,7 +37,7 @@
         /// <remarks>
         /// A set of key-value pairs that describe the state of an entity. Optional.
         /// </remarks>
-        public T Properties { get; set; }
+        public Dictionary<string, JToken> Properties { get; set; }
 
         /// <summary>
         /// Gets or sets related entities.
@@ -50,7 +51,7 @@
         /// MUST contain a rel attribute to describe its relationship to the parent entity.
         /// In JSON Siren, this is represented as an array. Optional.
         /// </remarks>
-        public IEnumerable<SubEntity> Entities { get; set; }
+        public IEnumerable<Entity> Entities { get; set; }
 
         /// <summary>
         /// Gets or sets a list of links associated with the entity.
@@ -71,5 +72,15 @@
         /// such as { "actions": [{ ... }] }. See Actions. Optional
         /// </remarks>
         public IEnumerable<Action> Actions { get; set; }
+
+        /// <summary>
+        /// Gets or sets the unique relationship for getting entities associated with this sub-entity.
+        /// A client would use these to find the appropriate sub-entity href to get.
+        /// </summary>
+        /// <remarks>
+        /// Defines the relationship of the sub-entity to its parent, per Web Linking (RFC5899).
+        /// MUST be an array of strings. Required.
+        /// </remarks>
+        public IEnumerable<string> Rel { get; set; }
     }
 }

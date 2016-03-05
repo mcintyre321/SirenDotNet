@@ -1,4 +1,7 @@
-﻿namespace SirenSharp.Mvc
+﻿using System.Linq;
+using Newtonsoft.Json.Linq;
+
+namespace SirenSharp.Mvc
 {
     using System.IO;
     using System.Net;
@@ -17,13 +20,13 @@
 
         public ApiContent(T entity)
         {
-            HypermediaEntity = new Entity<T>
+            HypermediaEntity = new Entity
             {
                 Actions = entity.GetSirenActions(),
                 Class = entity.GetSirenClasses(),
                 Entities = entity.GetSirenSubEntities(),
                 Links = entity.GetSirenLinks(),
-                Properties = entity
+                Properties = entity.GetType().GetProperties().ToDictionary(pi => pi.Name, pi => JToken.FromObject(pi.GetValue(this)))
             };
 
             string _jsonObject = JsonConvert.SerializeObject(
@@ -44,7 +47,7 @@
             this.Headers.ContentType = new MediaTypeHeaderValue("application/json");
         }
 
-        public Entity<T> HypermediaEntity { get; private set; }
+        public Entity HypermediaEntity { get; private set; }
 
         protected override Task SerializeToStreamAsync(Stream stream, TransportContext context)
         {
