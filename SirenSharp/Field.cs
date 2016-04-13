@@ -48,7 +48,7 @@
         /// depend on the value of the action's type attribute. See type under Actions, 
         /// above. Optional.
         /// </remarks>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(FieldTypes.FieldTypesJsonConverter))]
         public FieldTypes Type { get; set; }
 
         /// <summary>
