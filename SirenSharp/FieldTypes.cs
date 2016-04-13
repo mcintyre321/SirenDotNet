@@ -41,7 +41,7 @@ namespace SirenSharp
 
         public override string ToString()
         {
-            return base.ToString();
+            return this.v;
         }
 
         public class FieldTypesJsonConverter : JsonConverter 
