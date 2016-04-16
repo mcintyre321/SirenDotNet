@@ -1,10 +1,10 @@
-﻿namespace SirenSharp
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace SirenSharp
 {
     using System;
     using System.Collections.Generic;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// Actions show available behaviors an entity exposes.

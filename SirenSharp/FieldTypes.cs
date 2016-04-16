@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -65,13 +66,13 @@ namespace SirenSharp
 
             public override bool CanConvert(Type objectType)
             {
-                return (typeof(FieldTypes).IsAssignableFrom(objectType));
+                return (typeof(FieldTypes).GetTypeInfo().IsAssignableFrom(objectType.GetTypeInfo()));
             }
         }
 
         protected bool Equals(FieldTypes other)
         {
-            return string.Equals(v, other.v, StringComparison.InvariantCultureIgnoreCase);
+            return string.Equals(v, other.v, StringComparison.OrdinalIgnoreCase);
         }
 
         public override bool Equals(object obj)
@@ -84,7 +85,7 @@ namespace SirenSharp
 
         public override int GetHashCode()
         {
-            return (v != null ? StringComparer.InvariantCultureIgnoreCase.GetHashCode(v) : 0);
+            return (v != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(v) : 0);
         }
 
         public static bool operator ==(FieldTypes left, FieldTypes right)
