@@ -9,7 +9,6 @@ namespace SirenSharp
     /// </summary>
     public class Entity
     {
-        public Entity() {}
         /// <summary>
         /// Initializes a new instance of the <see cref="Entity{T}"/> class with required properties.
         /// </summary>
