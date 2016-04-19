@@ -8,6 +8,8 @@
     /// </summary>
     public class Field
     {
+        public Field() { }
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="Field"/> class with required properties.
         /// </summary>
