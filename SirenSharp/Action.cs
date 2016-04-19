@@ -5,7 +5,7 @@ namespace SirenSharp
 {
     using System;
     using System.Collections.Generic;
-
+    public Action(){}
     /// <summary>
     /// Actions show available behaviors an entity exposes.
     /// </summary>
