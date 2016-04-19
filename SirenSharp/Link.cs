@@ -8,6 +8,7 @@
     /// </summary>
     public class Link
     {
+        public Link () {}
         /// <summary>
         /// Initializes a new instance of the <see cref="Link"/> class with required properties.
         /// </summary>
