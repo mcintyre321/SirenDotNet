@@ -5,12 +5,13 @@ namespace SirenSharp
 {
     using System;
     using System.Collections.Generic;
-    public Action(){}
+   
     /// <summary>
     /// Actions show available behaviors an entity exposes.
     /// </summary>
     public class Action
     {
+        public Action(){}
         /// <summary>
         /// Initializes a new instance of the <see cref="Action"/> class with required properties.
         /// </summary>
