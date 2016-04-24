@@ -1,5 +1,4 @@
-﻿using System;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 
 namespace SirenSharp
 {
@@ -75,19 +74,5 @@ namespace SirenSharp
         public IEnumerable<Action> Actions { get; set; }
 
      
-    }
-
-   
-    public class SubEntityLink
-    {
-        public SubEntityLink()
-        {
-        }
- 
-        public Uri Href { get; set; }
-
-        public IEnumerable<string> Rel { get; set; }
-        public IEnumerable<string> Class { get; set; }
-
     }
 }
