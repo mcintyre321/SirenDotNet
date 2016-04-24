@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Newtonsoft.Json.Linq;
+using OneOf;
 
 namespace SirenSharp.Mvc
 {
@@ -24,7 +25,7 @@ namespace SirenSharp.Mvc
             {
                 Actions = entity.GetSirenActions(),
                 Class = entity.GetSirenClasses(),
-                Entities = entity.GetSirenSubEntities(),
+                Entities = entity.GetSirenSubEntities().Cast<OneOf<SubEntity, SubEntityLink>>(),
                 Links = entity.GetSirenLinks(),
                 Properties = entity.GetType().GetProperties().ToDictionary(pi => pi.Name, pi => JToken.FromObject(pi.GetValue(this)))
             };

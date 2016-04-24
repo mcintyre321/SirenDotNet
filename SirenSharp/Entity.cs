@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System;
+using Newtonsoft.Json.Linq;
 
 namespace SirenSharp
 {
@@ -51,7 +52,7 @@ namespace SirenSharp
         /// MUST contain a rel attribute to describe its relationship to the parent entity.
         /// In JSON Siren, this is represented as an array. Optional.
         /// </remarks>
-        public IEnumerable<Entity> Entities { get; set; }
+        public IEnumerable<OneOf.OneOf<SubEntity, SubEntityLink>> Entities { get; set; }
 
         /// <summary>
         /// Gets or sets a list of links associated with the entity.
@@ -73,14 +74,20 @@ namespace SirenSharp
         /// </remarks>
         public IEnumerable<Action> Actions { get; set; }
 
-        /// <summary>
-        /// Gets or sets the unique relationship for getting entities associated with this sub-entity.
-        /// A client would use these to find the appropriate sub-entity href to get.
-        /// </summary>
-        /// <remarks>
-        /// Defines the relationship of the sub-entity to its parent, per Web Linking (RFC5899).
-        /// MUST be an array of strings. Required.
-        /// </remarks>
+     
+    }
+
+   
+    public class SubEntityLink
+    {
+        public SubEntityLink()
+        {
+        }
+ 
+        public Uri Href { get; set; }
+
         public IEnumerable<string> Rel { get; set; }
+        public IEnumerable<string> Class { get; set; }
+
     }
 }

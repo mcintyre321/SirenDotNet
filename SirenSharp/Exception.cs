@@ -1,5 +1,6 @@
 ﻿namespace SirenSharp
 {
+    using OneOf;
     using System;
     using System.Collections.Generic;
 
@@ -71,9 +72,9 @@
             return new [] { "error" };
         }
 
-        public IEnumerable<Entity> GetSirenSubEntities()
+        public IEnumerable<OneOf<SubEntity, SubEntityLink>> GetSirenSubEntities()
         {
-            return new List<Entity>();
+            return new List<OneOf<SubEntity, SubEntityLink>>();
         }
 
         public IEnumerable<Link> GetSirenLinks()

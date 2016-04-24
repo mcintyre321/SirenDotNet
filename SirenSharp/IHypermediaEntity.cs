@@ -1,5 +1,6 @@
 ﻿namespace SirenSharp
 {
+    using OneOf;
     using System.Collections.Generic;
 
     /// <summary>
@@ -22,7 +23,7 @@
         /// Gets a list of Siren sub-entities associated with this entity
         /// </summary>
         /// <returns>An IEnumerable list of subentities</returns>
-        IEnumerable<Entity> GetSirenSubEntities();
+        IEnumerable<OneOf<SubEntity, SubEntityLink>> GetSirenSubEntities();
 
         /// <summary>
         /// Gets a list of Siren links associated with this entity

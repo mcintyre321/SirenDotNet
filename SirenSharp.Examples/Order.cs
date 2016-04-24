@@ -1,4 +1,7 @@
-﻿namespace SirenSharp.Examples
+﻿using System.Collections;
+using OneOf;
+
+namespace SirenSharp.Examples
 {
     using System.Collections.Generic;
 
@@ -24,10 +27,11 @@
             return new List<string>() { "order" };
         }
 
-        public IEnumerable<Entity> GetSirenSubEntities()
+        public IEnumerable<OneOf<SubEntity, SubEntityLink>> GetSirenSubEntities()
         {
             return null;
         }
+
 
         public IEnumerable<Link> GetSirenLinks()
         {
