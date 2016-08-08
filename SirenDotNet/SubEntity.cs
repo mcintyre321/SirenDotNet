@@ -5,7 +5,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace SirenSharp
+namespace SirenDotNet
 {
     [JsonConverter(typeof(SubEntityJsonConverter))]
     public class SubEntity
