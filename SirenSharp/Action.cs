@@ -24,7 +24,7 @@ namespace SirenSharp
             this.Method = HttpVerbs.Get;
             this.Href = href;
             this.Title = null;
-            this.Type = "application/x-www-form-urlencoded";
+            this.Type = null;
             this.Fields = null;
         }
 
@@ -71,7 +71,7 @@ namespace SirenSharp
         /// extended. If this attribute is omitted, GET should be assumed. Optional.
         /// </remarks>
         [JsonConverter(typeof(StringEnumConverter))]
-        public HttpVerbs Method { get; set; }
+        public HttpVerbs? Method { get; set; }
 
         /// <summary>
         /// Gets or sets the hypermedia reference to the action

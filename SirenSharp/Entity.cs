@@ -15,7 +15,7 @@ namespace SirenSharp
         public Entity()
         {
             this.Class = null;
-            this.Properties = new Dictionary<string, JToken>();
+            this.Properties = null;
             this.Entities = null;
             this.Links = null;
             this.Actions = null;
@@ -37,7 +37,7 @@ namespace SirenSharp
         /// <remarks>
         /// A set of key-value pairs that describe the state of an entity. Optional.
         /// </remarks>
-        public Dictionary<string, JToken> Properties { get; set; }
+        public JObject Properties { get; set; }
 
         /// <summary>
         /// Gets or sets related entities.
@@ -51,7 +51,7 @@ namespace SirenSharp
         /// MUST contain a rel attribute to describe its relationship to the parent entity.
         /// In JSON Siren, this is represented as an array. Optional.
         /// </remarks>
-        public IEnumerable<OneOf.OneOf<SubEntity, SubEntityLink>> Entities { get; set; }
+        public IEnumerable<SubEntity> Entities { get; set; }
 
         /// <summary>
         /// Gets or sets a list of links associated with the entity.
