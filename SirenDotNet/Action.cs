@@ -21,7 +21,7 @@ namespace SirenDotNet
         {
             this.Name = name;
             this.Class = null;
-            this.Method = HttpVerbs.Get;
+            this.Method = HttpVerbs.GET;
             this.Href = href;
             this.Title = null;
             this.Type = null;
@@ -37,7 +37,7 @@ namespace SirenDotNet
         {
             this.Name = name;
             this.Class = null;
-            this.Method = HttpVerbs.Get;
+            this.Method = HttpVerbs.GET;
             this.Href = new Uri(href, UriKind.Relative);
             this.Title = null;
             this.Type = "application/x-www-form-urlencoded";

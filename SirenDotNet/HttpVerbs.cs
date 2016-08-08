@@ -5,10 +5,11 @@
     /// </summary>
     public enum HttpVerbs
     {
-        Get,
-        Post,
-        Put,
-        Delete,
-        Patch
+        GET,
+        POST,
+        PUT,
+        DELETE,
+        PATCH,
+        OPTIONS
     }
 }

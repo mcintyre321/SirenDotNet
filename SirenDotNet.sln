@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenDotNet", "SirenDotNet\SirenDotNet.csproj", "{31DB25C2-C8D3-49C6-90FD-AD9ED8F16ECB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenDotNet.Tests", "SirenDotNet.Tests\SirenDotNet.Tests.csproj", "{556A6217-7600-44E4-8316-AA3CCBE9A260}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{31DB25C2-C8D3-49C6-90FD-AD9ED8F16ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31DB25C2-C8D3-49C6-90FD-AD9ED8F16ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31DB25C2-C8D3-49C6-90FD-AD9ED8F16ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556A6217-7600-44E4-8316-AA3CCBE9A260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556A6217-7600-44E4-8316-AA3CCBE9A260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556A6217-7600-44E4-8316-AA3CCBE9A260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556A6217-7600-44E4-8316-AA3CCBE9A260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

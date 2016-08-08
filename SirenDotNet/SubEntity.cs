@@ -25,18 +25,10 @@ namespace SirenDotNet
                 this.Links = null;
                 this.Actions = null;
             }
+          
 
-            public IEnumerable<string> Rel { get; set; }
-
-            /// <summary>
-            /// Gets or sets the representation. 
-            /// </summary>
-            /// <remarks>
-            /// Describes the nature of an entity's content based on the current representation. 
-            /// Possible values are implementation-dependent and should be documented. 
-            /// MUST be an array of strings. Optional.
-            /// </remarks>
             public IEnumerable<string> Class { get; set; }
+            public IEnumerable<string> Rel { get; set; }
 
             /// <summary>
             /// Gets or sets the list of properties.
@@ -80,7 +72,7 @@ namespace SirenDotNet
             /// </remarks>
             public IEnumerable<Action> Actions { get; set; }
 
-
+            public string Title { get; set; }
         }
 
         public class Linked : SubEntity
@@ -122,7 +114,7 @@ namespace SirenDotNet
                     serializer.Populate(sr, lse);
                 }
             }
-            var ese = new SubEntity.Linked();
+            var ese = new SubEntity.Embedded();
             using (var sr = CopyReaderForObject(reader, token))
             {
                 serializer.Populate(sr, ese);
