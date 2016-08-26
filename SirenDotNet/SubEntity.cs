@@ -25,7 +25,8 @@ namespace SirenDotNet
                 this.Links = null;
                 this.Actions = null;
             }
-          
+
+            public string Title { get; set; }
 
             public IEnumerable<string> Class { get; set; }
             public IEnumerable<string> Rel { get; set; }
@@ -72,7 +73,6 @@ namespace SirenDotNet
             /// </remarks>
             public IEnumerable<Action> Actions { get; set; }
 
-            public string Title { get; set; }
         }
 
         public class Linked : SubEntity
@@ -80,12 +80,12 @@ namespace SirenDotNet
             public Linked()
             {
             }
+            public string Title { get; set; }
 
             public Uri Href { get; set; }
-            public string Title { get; set; }
             public IEnumerable<string> Rel { get; set; }
             public IEnumerable<string> Class { get; set; }
-
+            public string Type { get; set; }
         }
     }
 

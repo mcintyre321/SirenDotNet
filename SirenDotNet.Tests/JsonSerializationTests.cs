@@ -27,11 +27,13 @@ namespace SirenDotNet.Tests
                ContractResolver = new CamelCasePropertyNamesContractResolver(),
                NullValueHandling = NullValueHandling.Ignore
             });
+            reserialized = JToken.Parse(reserialized.ToString());
             //Then the document json is equivalent
-            Assert.AreEqual(jsonDoc.ToString(), reserialized.ToString());
+            Assert.True(JToken.DeepEquals(jsonDoc, reserialized));
         }
 
         string json = @"{
+  ""title"" : ""A title"",
   ""class"": [
     ""root"",
     ""subreddit"",
@@ -39,6 +41,7 @@ namespace SirenDotNet.Tests
   ],
   ""entities"": [
     {
+      ""title"" : ""Another title"",
       ""class"": [
         ""post""
       ],
