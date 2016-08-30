@@ -86,7 +86,6 @@ namespace SirenDotNet
             public IEnumerable<string> Rel { get; set; }
             public IEnumerable<string> Class { get; set; }
             public string Type { get; set; }
-            public string Type { get; set; }
         }
     }
 

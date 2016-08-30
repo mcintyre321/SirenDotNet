@@ -20,7 +20,6 @@ namespace SirenDotNet
             this.Links = null;
             this.Actions = null;
         }
-        public string Title { get; set; }
 
 
         public string Title { get; set; }
