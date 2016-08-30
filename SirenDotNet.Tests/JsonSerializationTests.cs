@@ -34,6 +34,7 @@ namespace SirenDotNet.Tests
         }
 
         string json = @"{
+  ""title"" : ""A title"",
   ""class"": [
     ""root"",
     ""subreddit"",
@@ -41,6 +42,7 @@ namespace SirenDotNet.Tests
   ],
   ""entities"": [
     {
+      ""title"" : ""Another title"",
       ""class"": [
         ""post""
       ],
