@@ -21,6 +21,8 @@ namespace SirenDotNet
             this.Actions = null;
         }
 
+        public string Title { get; set; }
+
         /// <summary>
         /// Gets or sets the representation. 
         /// </summary>

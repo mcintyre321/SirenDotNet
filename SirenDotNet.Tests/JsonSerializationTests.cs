@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using JsonDiffPatch;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
@@ -27,8 +28,9 @@ namespace SirenDotNet.Tests
                ContractResolver = new CamelCasePropertyNamesContractResolver(),
                NullValueHandling = NullValueHandling.Ignore
             });
+            reserialized = JToken.Parse(reserialized.ToString());
             //Then the document json is equivalent
-            Assert.AreEqual(jsonDoc.ToString(), reserialized.ToString());
+            Assert.True(JToken.DeepEquals(jsonDoc, reserialized));
         }
 
         string json = @"{
