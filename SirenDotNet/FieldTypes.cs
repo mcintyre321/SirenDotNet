@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
 using Newtonsoft.Json;
@@ -97,5 +98,9 @@ namespace SirenDotNet
         {
             return !Equals(left, right);
         }
+
+
+        [JsonExtensionData]
+        public IDictionary<string, object> ExtensionData { get; } = new Dictionary<string, object>();
     }
 }

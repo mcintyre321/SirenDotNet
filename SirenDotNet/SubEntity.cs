@@ -8,7 +8,7 @@ using Newtonsoft.Json.Linq;
 namespace SirenDotNet
 {
     [JsonConverter(typeof(SubEntityJsonConverter))]
-    public class SubEntity
+    public abstract class SubEntity
     {
 
 
@@ -73,6 +73,9 @@ namespace SirenDotNet
             /// </remarks>
             public IEnumerable<Action> Actions { get; set; }
 
+            [JsonExtensionData]
+            public IDictionary<string, object> ExtensionData { get; } = new Dictionary<string, object>();
+
         }
 
         public class Linked : SubEntity
@@ -86,6 +89,9 @@ namespace SirenDotNet
             public IEnumerable<string> Rel { get; set; }
             public IEnumerable<string> Class { get; set; }
             public string Type { get; set; }
+
+            [JsonExtensionData]
+            public IDictionary<string, object> ExtensionData { get; } = new Dictionary<string, object>();
         }
     }
 

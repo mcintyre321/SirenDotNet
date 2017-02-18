@@ -1,4 +1,6 @@
-﻿namespace SirenDotNet
+﻿using System.Collections.Generic;
+
+namespace SirenDotNet
 {
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
@@ -60,5 +62,8 @@
         /// A value assigned to the field. Optional.
         /// </remarks>
         public object Value { get; set; }
+
+        [JsonExtensionData]
+        public IDictionary<string, object> ExtensionData { get; } = new Dictionary<string, object>();
     }
 }

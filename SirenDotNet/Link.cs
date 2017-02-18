@@ -1,4 +1,6 @@
-﻿namespace SirenDotNet
+﻿using Newtonsoft.Json;
+
+namespace SirenDotNet
 {
     using System;
     using System.Collections.Generic;
@@ -51,5 +53,8 @@
         public Uri Href { get; set; }
         public string Title { get; set; }
         public string Type { get; set; }
+
+        [JsonExtensionData]
+        public IDictionary<string, object> ExtensionData { get; } = new Dictionary<string, object>();
     }
 }

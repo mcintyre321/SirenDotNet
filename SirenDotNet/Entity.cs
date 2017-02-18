@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace SirenDotNet
 {
@@ -76,6 +77,7 @@ namespace SirenDotNet
         /// </remarks>
         public IEnumerable<Action> Actions { get; set; }
 
-     
+        [JsonExtensionData]
+        public IDictionary<string, object> ExtensionData { get; } = new Dictionary<string, object>();
     }
 }

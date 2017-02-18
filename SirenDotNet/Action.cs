@@ -106,5 +106,7 @@ namespace SirenDotNet
         /// such as { "fields" : [{ ... }] }. See Fields. Optional.
         /// </remarks>
         public IEnumerable<Field> Fields { get; set; }
+
+        [JsonExtensionData] public IDictionary<string, object> ExtensionData { get; } = new Dictionary<string, object>();
     }
 }
