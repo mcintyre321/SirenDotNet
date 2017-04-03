@@ -5,6 +5,7 @@
     <Authors>Harry McIntyre</Authors>
     <Title>SirenDotNet - Siren Hypermedia Types</Title>
     <Company>Harry McIntyre</Company>
+    <PackageVersion>1.0.0</PackageVersion>
     <Product>Harry McIntyre</Product>
     <Description>SirenDotNet is a library of Types for representing the hypermedia format Siren by Kevin Swiber.</Description>
     <PackageProjectUrl>https://github.com/mcintyre321/SirenDotNet</PackageProjectUrl>
